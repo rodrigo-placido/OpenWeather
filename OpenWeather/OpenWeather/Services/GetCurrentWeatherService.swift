@@ -7,6 +7,12 @@
 //
 
 import Foundation
-import Alamofire
 
+protocol GetCurrentWeatherService {
+    
+    func getCurrentWeatherBy(lat: String,
+                             lon: String,
+                           completion: ((_ currentWeather: [CurrentWeather?], _ error: ApiError?) -> Void)?)
+    
+}
 
