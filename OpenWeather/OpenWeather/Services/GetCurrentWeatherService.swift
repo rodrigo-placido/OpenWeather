@@ -12,7 +12,7 @@ protocol GetCurrentWeatherService {
     
     func getCurrentWeatherBy(lat: String,
                              lon: String,
-                           completion: @escaping((_ currentWeather: CurrentWeatherList?, _ error: ApiError?) -> Void))
+                             completion: @escaping((_ currentWeather: CurrentWeatherList?, _ error: ApiError?) -> Void))
     
 }
 
