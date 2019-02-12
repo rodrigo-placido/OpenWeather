@@ -7,14 +7,20 @@
 //
 
 import Foundation
+import Unbox
 
-struct Coord {
+struct Coord: Unboxable {
     var lat: String
     var lon: String
     
     init() {
         self.lat = ""
         self.lon = ""
+    }
+    
+    init(unboxer: Unboxer) throws {
+        self.lat = try unboxer.unbox(key: "lat")
+        self.lon = try unboxer.unbox(key: "lon")
     }
     
 }

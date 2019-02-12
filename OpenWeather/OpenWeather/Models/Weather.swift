@@ -7,17 +7,25 @@
 //
 
 import Foundation
+import Unbox
 
-struct Weather {
+struct Weather: Unboxable {
     var id: Int
     var main: String
-    var descriptiom: String
+    var description: String
     var icon: String
     
     init() {
         self.id = 0
         self.main = ""
-        self.descriptiom = ""
+        self.description = ""
         self.icon = ""
+    }
+    
+    init(unboxer: Unboxer) throws {
+        self.id = try unboxer.unbox(key: "id")
+        self.main = try unboxer.unbox(key: "main")
+        self.description = try unboxer.unbox(key: "description")
+        self.icon = try unboxer.unbox(key: "icon")
     }
 }
