@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let service = GetCurrentWeatherServiceImp()
-        service.getCurrentWeatherBy(lat: "22", lon: "22") { (currentWeatherList, error) in
-            print("aqui")
+        service.getCurrentWeatherBy(lat: "22", lon: "22") { (currentWeather, error) in
+            print(currentWeather ?? "rere")
         }
     }
 

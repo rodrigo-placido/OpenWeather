@@ -22,5 +22,4 @@ struct Coord: Unboxable {
         self.lat = try unboxer.unbox(key: "lat")
         self.lon = try unboxer.unbox(key: "lon")
     }
-    
 }
