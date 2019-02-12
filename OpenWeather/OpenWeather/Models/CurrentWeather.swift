@@ -10,4 +10,12 @@ import Foundation
 
 struct CurrentWeather {
     var name: String
+    var coord: Coord
+    var weather: [Weather]
+    
+    init () {
+        self.name = ""
+        self.coord = Coord()
+        self.weather = [Weather]()
+    }
 }

@@ -14,6 +14,6 @@ struct ApiConfig {
     static let statusCodeValid = 200..<300
     
     static func getUrlFindByCoordinates(lat: String, lon: String) -> String {
-        return "\(apiHost)find?lat=\(lat)&lon=\(lon)"
+        return "\(apiHost)find?lat=\(lat)&lon=\(lon)&appid=\(apiKey)"
     }
 }

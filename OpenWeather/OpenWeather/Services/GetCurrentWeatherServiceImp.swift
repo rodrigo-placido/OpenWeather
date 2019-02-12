@@ -14,9 +14,10 @@ class GetCurrentWeatherServiceImp: GetCurrentWeatherService {
     func getCurrentWeatherBy(lat: String,
                              lon: String,
                              completion: ((_ currentWeather: [CurrentWeather?], _ error: ApiError?) -> Void)?) {
-        Alamofire.request(ApiConfig.getUrlFindByCoordinates(lat: "-22", lon: "-22"))
+        
+        Alamofire.request(ApiConfig.getUrlFindByCoordinates(lat: "-23.5", lon: "-46.6"))
             .validate(statusCode: ApiConfig.statusCodeValid)
-            .responseData { response in
+            .responseJSON{ response in
                 switch response.result {
                 case .success:
                     print("Validation Successful")
