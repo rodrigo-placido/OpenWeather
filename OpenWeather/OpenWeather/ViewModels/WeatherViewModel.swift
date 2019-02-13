@@ -9,7 +9,7 @@
 import Foundation
 
 class WeatherViewModel {
-    var getCurrentWeatherService: GetCurrentWeatherService
+    private var getCurrentWeatherService: GetCurrentWeatherService
     
     init(getCurrentWeatherService: GetCurrentWeatherService) {
         self.getCurrentWeatherService = getCurrentWeatherService

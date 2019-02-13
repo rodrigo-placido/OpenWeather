@@ -15,9 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        ServiceLocator.shared.addService(service: WeatherMainViewController(weatherViewModel: WeatherViewModel(getCurrentWeatherService: GetCurrentWeatherServiceImp())) as
-            WeatherMainViewController)
+        let dependencyInjection = DIConfig()
+        dependencyInjection.setup()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        
+        guard let weatherMainViewController: WeatherMainViewController = ServiceLocator.shared.getService() else {return true}
+        let navController = UINavigationController(rootViewController: weatherMainViewController)
+        self.window?.rootViewController = navController
+        
+        self.window?.makeKeyAndVisible()
         
         return true
     }

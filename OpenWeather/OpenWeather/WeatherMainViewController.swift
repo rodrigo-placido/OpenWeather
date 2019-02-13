@@ -9,10 +9,8 @@
 import UIKit
 
 class WeatherMainViewController: UIViewController {
-    let weatherViewModel: WeatherViewModel
 
-    public init(weatherViewModel: WeatherViewModel) {
-        self.weatherViewModel = weatherViewModel
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,6 +20,7 @@ class WeatherMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .red
     }
     
 }
