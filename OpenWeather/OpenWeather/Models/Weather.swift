@@ -14,12 +14,14 @@ struct Weather: Unboxable {
     var main: String
     var description: String
     var icon: String
+    var iconUrl: String
     
     init() {
         self.id = 0
         self.main = ""
         self.description = ""
         self.icon = ""
+        self.iconUrl = ""
     }
     
     init(unboxer: Unboxer) throws {
@@ -27,5 +29,6 @@ struct Weather: Unboxable {
         self.main = try unboxer.unbox(key: "main")
         self.description = try unboxer.unbox(key: "description")
         self.icon = try unboxer.unbox(key: "icon")
+        self.iconUrl = "http://openweathermap.org/img/w/\(self.icon).png"
     }
 }

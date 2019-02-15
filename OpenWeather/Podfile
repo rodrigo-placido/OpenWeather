@@ -6,6 +6,7 @@ target 'OpenWeather' do
   use_frameworks!
   pod 'Alamofire', '~> 4.4'
   pod 'Unbox'
+  pod 'Kingfisher'
   # Pods for OpenWeather
 
   target 'OpenWeatherTests' do
