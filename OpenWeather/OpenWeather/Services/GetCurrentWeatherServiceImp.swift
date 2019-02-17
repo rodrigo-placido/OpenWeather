@@ -12,11 +12,13 @@ import Unbox
 
 class GetCurrentWeatherServiceImp: GetCurrentWeatherService {
    
-    func getCurrentWeatherBy(lat: String,
-                             lon: String,
+    func getCurrentWeatherBy(latMin: Double,
+                             latMax: Double,
+                             lonMin: Double,
+                             lonMax: Double,
                              completion: @escaping ((_ currentWeather: CurrentWeatherList?, _ error: ApiError?) -> Void)) {
         
-        Alamofire.request(ApiConfig.getUrlFindByCoordinates(lat: "-23.5", lon: "-46.6"))
+        Alamofire.request(ApiConfig.getUrlFindByCoordinates(latMin: latMin, latMax: latMax, lonMin: lonMin, lonMax: lonMax))
             .validate(statusCode: ApiConfig.statusCodeValid)
             .responseJSON{ response in
                 switch response.result {

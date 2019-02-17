@@ -13,7 +13,7 @@ struct ApiConfig {
     static let apiKey = "7d01c7a2d8be734b04a8397cbd8c4356"
     static let statusCodeValid = 200..<300
     
-    static func getUrlFindByCoordinates(lat: String, lon: String) -> String {
-        return "\(apiHost)find?lat=\(lat)&lon=\(lon)&appid=\(apiKey)"
+    static func getUrlFindByCoordinates(latMin: Double, latMax: Double, lonMin: Double, lonMax: Double) -> String {
+        return "\(apiHost)box/city?bbox=\(latMin),\(latMax),\(lonMin),\(lonMax),10&appid=\(apiKey)"
     }
 }

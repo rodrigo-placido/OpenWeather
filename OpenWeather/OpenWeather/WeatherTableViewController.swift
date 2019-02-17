@@ -8,13 +8,16 @@
 
 import UIKit
 import Kingfisher
+import CoreLocation
 
 class WeatherTableViewController: UITableViewController {
     let weatherViewModel: WeatherViewModel
+    var locationManager: LocationManager
     var listWeathers = CurrentWeatherList()
 
     public init(weatherViewModel: WeatherViewModel) {
         self.weatherViewModel = weatherViewModel
+        self.locationManager = LocationManager()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,12 +30,16 @@ class WeatherTableViewController: UITableViewController {
         self.view.backgroundColor = .blue
         self.tableView.register(WeatherListTableViewCell.self, forCellReuseIdentifier: "WeatherListTableViewCell")
         self.tableView.tableFooterView = UIView()
-        weatherViewModel.getCurrentWeatherBy(lat: "", lon: "") { (callback) in
-            switch(callback){
-            case .success(let list):
-                self.listWeathers = list
-                self.tableView.reloadData()
-                break
+        LocationManager.sharedInstance.getLocation(startCallback: {
+            print("DidStartLocation")
+        }) { (location, error) in
+            self.weatherViewModel.getCurrentWeatherBy(lat: location!.coordinate.latitude, lon:  location!.coordinate.longitude) { (callback) in
+                switch(callback){
+                case .success(let list):
+                    self.listWeathers = list
+                    self.tableView.reloadData()
+                    break
+                }
             }
         }
     }

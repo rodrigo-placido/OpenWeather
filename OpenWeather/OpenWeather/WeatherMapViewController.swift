@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MapKit
 
 class WeatherMapViewController: UIViewController {
     let weatherViewModel: WeatherViewModel
     var currentWeatherList = CurrentWeatherList()
+    var mapView = MKMapView()
     
     public init(weatherViewModel: WeatherViewModel) {
         self.weatherViewModel = weatherViewModel

@@ -10,8 +10,10 @@ import Foundation
 
 protocol GetCurrentWeatherService {
     
-    func getCurrentWeatherBy(lat: String,
-                             lon: String,
+    func getCurrentWeatherBy(latMin: Double,
+                             latMax: Double,
+                             lonMin: Double,
+                             lonMax: Double,
                              completion: @escaping((_ currentWeather: CurrentWeatherList?, _ error: ApiError?) -> Void))
     
 }

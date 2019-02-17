@@ -18,6 +18,7 @@ class WeatherListTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         nameLabel = UILabel(frame: CGRect.zero)
+        nameLabel.font = UIFont(name: nameLabel.font.fontName, size: 12.0)
         iconImageView = UIImageView(frame: CGRect.zero)
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 

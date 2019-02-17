@@ -19,7 +19,7 @@ struct Coord: Unboxable {
     }
     
     init(unboxer: Unboxer) throws {
-        self.lat = try unboxer.unbox(key: "lat")
-        self.lon = try unboxer.unbox(key: "lon")
+        self.lat = try unboxer.unbox(key: "Lat")
+        self.lon = try unboxer.unbox(key: "Lon")
     }
 }

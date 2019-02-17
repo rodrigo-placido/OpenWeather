@@ -21,6 +21,6 @@ class DIConfig {
         
         ServiceLocator.shared.addService(service: WeatherMainViewController(listView: weatherTableViewController, mapView: weatherMapViewController) as
                     WeatherMainViewController)
-        
+                
     }
 }
