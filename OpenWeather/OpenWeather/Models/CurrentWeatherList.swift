@@ -9,10 +9,10 @@
 import Foundation
 import Unbox
 
-struct CurrentWeatherList: Unboxable {
+class CurrentWeatherList: Unboxable {
     var currentWeatherList: [CurrentWeather]
     
-    init(unboxer: Unboxer) throws {
+    required init(unboxer: Unboxer) throws {
         self.currentWeatherList = try unboxer.unbox(key: "list")
     }
     

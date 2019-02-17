@@ -9,20 +9,23 @@
 import Foundation
 import Unbox
 
-struct CurrentWeather: Unboxable {
+class CurrentWeather: Unboxable {
     var name: String
     var coord: Coord
+    var main: Main
     var weather: [Weather]
     
     init () {
         self.name = ""
         self.coord = Coord()
+        self.main = Main()
         self.weather = [Weather]()
     }
     
-    init(unboxer: Unboxer) throws {
+    required init(unboxer: Unboxer) throws {
         self.name = try unboxer.unbox(key: "name")
         self.coord = try unboxer.unbox(key: "coord")
+        self.main = try unboxer.unbox(key: "main")
         self.weather = try unboxer.unbox(key: "weather")
     }
 }

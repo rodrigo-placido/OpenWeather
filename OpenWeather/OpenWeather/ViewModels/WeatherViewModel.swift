@@ -33,8 +33,19 @@ class WeatherViewModel {
         let lonMax = region.center.longitude + 0.5 * region.span.longitudeDelta;
 
         getCurrentWeatherService.getCurrentWeatherBy(latMin: latMin, latMax: latMax, lonMin: lonMin, lonMax: lonMax) { (currentWeather, error) in
+            currentWeather?.currentWeatherList.forEach(){
+                $0.coord.distance = self.distanceFromLocation(location1: CLLocation(latitude: lat, longitude: lon), location2: CLLocation(latitude: $0.coord.lat, longitude: $0.coord.lon))
+            }
+            currentWeather?.currentWeatherList = ((currentWeather?.currentWeatherList.filter({$0.coord.distance!
+                < 50000.0}).sorted(by: {(a: CurrentWeather, b: CurrentWeather) -> Bool in
+                    return a.coord.distance! < b.coord.distance!
+                }))!)
             completion(.success(currentWeather!))
         }
+    }
+    
+    private func distanceFromLocation(location1: CLLocation, location2: CLLocation) -> Double {
+        return location1.distance(from: location2)
     }
 }
 

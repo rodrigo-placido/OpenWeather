@@ -9,7 +9,7 @@
 import Foundation
 import Unbox
 
-struct Weather: Unboxable {
+class Weather: Unboxable {
     var id: Int
     var main: String
     var description: String
@@ -24,7 +24,7 @@ struct Weather: Unboxable {
         self.iconUrl = ""
     }
     
-    init(unboxer: Unboxer) throws {
+    required init(unboxer: Unboxer) throws {
         self.id = try unboxer.unbox(key: "id")
         self.main = try unboxer.unbox(key: "main")
         self.description = try unboxer.unbox(key: "description")

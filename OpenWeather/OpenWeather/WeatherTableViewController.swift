@@ -27,7 +27,6 @@ class WeatherTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
         self.tableView.register(WeatherListTableViewCell.self, forCellReuseIdentifier: "WeatherListTableViewCell")
         self.tableView.tableFooterView = UIView()
         LocationManager.sharedInstance.getLocation(startCallback: {
@@ -60,7 +59,9 @@ class WeatherTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherListTableViewCell") as! WeatherListTableViewCell
         let currentWeather = listWeathers.currentWeatherList[indexPath.row]
         cell.nameLabel.text = currentWeather.name
+        cell.distanceLabel.text =  "\((currentWeather.coord.distance! / 1000).rounded())Km"
         cell.iconImageView.kf.setImage(with: URL(string: currentWeather.weather[0].iconUrl))
+        cell.tempLabel.text = "\(currentWeather.main.temp)"
         return cell
     }
 }

@@ -9,16 +9,18 @@
 import Foundation
 import Unbox
 
-struct Coord: Unboxable {
-    var lat: String
-    var lon: String
+class Coord: Unboxable {
+    var lat: Double
+    var lon: Double
+    var distance: Double?
     
     init() {
-        self.lat = ""
-        self.lon = ""
+        self.lat = 0
+        self.lon = 0
+        self.distance = 0
     }
     
-    init(unboxer: Unboxer) throws {
+    required init(unboxer: Unboxer) throws {
         self.lat = try unboxer.unbox(key: "Lat")
         self.lon = try unboxer.unbox(key: "Lon")
     }
