@@ -25,19 +25,27 @@ class WeatherMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSegmentControl()
+        setup()
     }
     
-    func setupSegmentControl() {
+    func setup() {
         segmentedControl = UISegmentedControl(items: ["List", "Map"])
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
         self.navigationItem.titleView = segmentedControl
-        setupView()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: UserPreference.getTitleButton(), style: .plain, target: self, action: #selector(changeUnit(_:)))
+
+        updateView()
     }
     
-    private func setupView() {
-        updateView()
+     @objc func changeUnit(_ sender: Any) {
+        UserPreference.getShowFahrenheitTemp() ? UserPreference.setShowFahrenheitTemp(false) : UserPreference.setShowFahrenheitTemp(true)
+       if segmentedControl.selectedSegmentIndex == 0 {
+            listView.viewDidAppear(true)
+       } else {
+            mapView.viewDidAppear(true)
+        }
     }
     
     private func updateView() {

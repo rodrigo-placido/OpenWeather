@@ -69,7 +69,7 @@ class WeatherTableViewController: UITableViewController {
         cell.nameLabel.text = currentWeather.name
         cell.distanceLabel.text =  "\((currentWeather.coord.distance! / 1000).rounded())Km"
         cell.iconImageView.kf.setImage(with: URL(string: currentWeather.weather[0].iconUrl))
-        cell.tempLabel.text = "\(currentWeather.main.tempCelsius)"
+        cell.tempLabel.text = "\(currentWeather.main.selectedTemp!)"
         return cell
     }
 }

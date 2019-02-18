@@ -22,6 +22,7 @@
 		5B14EEDA2219ED9600B41445 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B14EED92219ED9600B41445 /* Main.swift */; };
 		5B14EEDC221A06A200B41445 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B14EEDB221A06A200B41445 /* UIColor+Convenience.swift */; };
 		5B14EEDE221A49A300B41445 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B14EEDD221A49A300B41445 /* WeatherHelper.swift */; };
+		5B14EEE0221A50B600B41445 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B14EEDF221A50B600B41445 /* UserPreference.swift */; };
 		5B3F91F02211840100423BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F91EF2211840100423BA4 /* AppDelegate.swift */; };
 		5B3F91F52211840100423BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F91F32211840100423BA4 /* Main.storyboard */; };
 		5B3F91F72211840200423BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F91F62211840200423BA4 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		5B14EED92219ED9600B41445 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		5B14EEDB221A06A200B41445 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Convenience.swift"; sourceTree = "<group>"; };
 		5B14EEDD221A49A300B41445 /* WeatherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
+		5B14EEDF221A50B600B41445 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		5B3F91EC2211840100423BA4 /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3F91EF2211840100423BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B3F91F42211840100423BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				5B11596522162E06006F2AA3 /* WeatherListTableViewCell.swift */,
 				5B14EEDB221A06A200B41445 /* UIColor+Convenience.swift */,
 				5B14EEDD221A49A300B41445 /* WeatherHelper.swift */,
+				5B14EEDF221A50B600B41445 /* UserPreference.swift */,
 			);
 			path = OpenWeather;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-OpenWeather/Pods-OpenWeather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -462,6 +466,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +507,7 @@
 				5B0D36962213AD9400ED4C62 /* DIConfig.swift in Sources */,
 				5B0D3698221457DD00ED4C62 /* WeatherTableViewController.swift in Sources */,
 				5B0D3692221380ED00ED4C62 /* ServiceLocator.swift in Sources */,
+				5B14EEE0221A50B600B41445 /* UserPreference.swift in Sources */,
 				5B0D368C221262A100ED4C62 /* CurrentWeatherList.swift in Sources */,
 				5B8471FE22119E1200CB6607 /* CurrentWeather.swift in Sources */,
 				5B14EEDE221A49A300B41445 /* WeatherHelper.swift in Sources */,

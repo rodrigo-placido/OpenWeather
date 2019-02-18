@@ -14,6 +14,7 @@ class WeatherMapViewController: UIViewController {
     var currentWeatherList = CurrentWeatherList()
     var mapView = MKMapView()
     var listWeathers = CurrentWeatherList()
+    private var mapChangedFromUserInteraction = false
     
     public init(weatherViewModel: WeatherViewModel) {
         self.weatherViewModel = weatherViewModel
@@ -30,6 +31,10 @@ class WeatherMapViewController: UIViewController {
         self.mapView.delegate = self
         self.mapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.mapView)
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.didDragMap(_:)))
+        panGesture.delegate = self
+        self.mapView.addGestureRecognizer(panGesture)
         
         self.mapView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0.0).isActive = true
         self.mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0.0).isActive = true
@@ -52,25 +57,25 @@ class WeatherMapViewController: UIViewController {
             case .success(let list):
                 self.listWeathers = list
                 self.centerMapOnLocation(location)
+                self.mapView.removeAnnotations(self.mapView.annotations)
                 
                 for location in self.listWeathers.currentWeatherList {
                     let annotation = MKPointAnnotation()
                     annotation.title = location.name
-                    annotation.subtitle = "\(location.main.tempCelsius)"
+                    annotation.subtitle = "\(location.main.selectedTemp!)"
                     annotation.coordinate = CLLocationCoordinate2D(latitude: location.coord.lat, longitude: location.coord.lon)
                     self.mapView.addAnnotation(annotation)
                 }
             }
         }
     }
-    
 }
 
 extension WeatherMapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        if animated == false {
+    @objc func didDragMap(_ sender: UIGestureRecognizer) {
+        if sender.state == .ended {
             let location = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-            self.loadWeatherList(location)
+                        self.loadWeatherList(location)// do something here
         }
     }
     
@@ -79,5 +84,11 @@ extension WeatherMapViewController: MKMapViewDelegate {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         self.mapView.setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension WeatherMapViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

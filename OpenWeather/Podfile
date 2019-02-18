@@ -7,6 +7,7 @@ target 'OpenWeather' do
   pod 'Alamofire', '~> 4.4'
   pod 'Unbox'
   pod 'Kingfisher'
+  pod 'SVProgressHUD'
   # Pods for OpenWeather
 
   target 'OpenWeatherTests' do

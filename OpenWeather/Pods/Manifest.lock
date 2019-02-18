@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.8.1)
   - Kingfisher (5.1.1)
+  - SVProgressHUD (2.2.5)
   - Unbox (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Kingfisher
+  - SVProgressHUD
   - Unbox
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
+    - SVProgressHUD
     - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
-PODFILE CHECKSUM: 0334584a01b690506f4c802c66a7fc85924180b3
+PODFILE CHECKSUM: 960e50bf17f097212a1fb88ab17abfa180054aea
 
 COCOAPODS: 1.5.3
