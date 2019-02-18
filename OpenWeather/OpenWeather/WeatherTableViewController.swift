@@ -29,6 +29,14 @@ class WeatherTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.register(WeatherListTableViewCell.self, forCellReuseIdentifier: "WeatherListTableViewCell")
         self.tableView.tableFooterView = UIView()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.loadWeatherList()
+    }
+    
+    func loadWeatherList() {
         LocationManager.sharedInstance.getLocation(startCallback: {
             print("DidStartLocation")
         }) { (location, error) in
@@ -61,7 +69,7 @@ class WeatherTableViewController: UITableViewController {
         cell.nameLabel.text = currentWeather.name
         cell.distanceLabel.text =  "\((currentWeather.coord.distance! / 1000).rounded())Km"
         cell.iconImageView.kf.setImage(with: URL(string: currentWeather.weather[0].iconUrl))
-        cell.tempLabel.text = "\(currentWeather.main.temp)"
+        cell.tempLabel.text = "\(currentWeather.main.tempCelsius)"
         return cell
     }
 }

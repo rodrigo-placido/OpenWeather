@@ -11,7 +11,7 @@ import Alamofire
 import Unbox
 
 class GetCurrentWeatherServiceImp: GetCurrentWeatherService {
-   
+    
     func getCurrentWeatherBy(latMin: Double,
                              latMax: Double,
                              lonMin: Double,
@@ -35,6 +35,6 @@ class GetCurrentWeatherServiceImp: GetCurrentWeatherService {
                     completion(nil, ApiError.unknown)
                     break
                 }
-            }
+        }
     }
 }

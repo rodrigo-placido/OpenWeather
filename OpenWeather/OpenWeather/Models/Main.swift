@@ -10,13 +10,19 @@ import Foundation
 import Unbox
 
 class Main: Unboxable {
-    let temp: Int
+    let tempCelsius: String
+    let tempFahrenheit: String?
     
     required init(unboxer: Unboxer) throws {
-        self.temp = try unboxer.unbox(key: "temp")
+        let temp: Double = try unboxer.unbox(key: "temp")
+        self.tempCelsius = "\(Int(temp))°C"
+        let fahrenheit = WeatherHelper.convertToFahrenheit(celsius: temp)
+        self.tempFahrenheit = "\(Int(fahrenheit))°F"
+
     }
     
     init() {
-        self.temp = 0
+        self.tempCelsius = ""
+        self.tempFahrenheit = ""
     }
 }

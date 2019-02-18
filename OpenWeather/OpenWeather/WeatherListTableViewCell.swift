@@ -57,11 +57,11 @@ class WeatherListTableViewCell: UITableViewCell {
         tempLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor, constant: 0.0).isActive = true
         tempLabel.heightAnchor.constraint(equalToConstant: 14).isActive = true
         tempLabel.leftAnchor.constraint(equalTo: self.iconImageView.leftAnchor, constant: 20).isActive = true
-        tempLabel.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        tempLabel.widthAnchor.constraint(equalToConstant: 30).isActive = true
         
         nameLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor, constant: 0.0).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 14).isActive = true
-        nameLabel.leftAnchor.constraint(equalTo: self.tempLabel.rightAnchor, constant: 0).isActive = true
+        nameLabel.leftAnchor.constraint(equalTo: self.tempLabel.rightAnchor, constant: 10).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: self.distanceLabel.leftAnchor, constant: -10).isActive = true
     }
     
