@@ -14,7 +14,8 @@ target 'OpenWeather' do
   # Pods for OpenWeather
 
   target 'OpenWeatherTests' do
-     shared_pods
+    use_frameworks!
+    shared_pods
     inherit! :search_paths
   
     # Pods for testing

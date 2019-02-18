@@ -24,4 +24,10 @@ class Coord: Unboxable {
         self.lat = try unboxer.unbox(key: "Lat")
         self.lon = try unboxer.unbox(key: "Lon")
     }
+    
+    init(lat: Double, lon: Double) {
+        self.lat = lat
+        self.lon = lon
+        self.distance = 0
+    }
 }

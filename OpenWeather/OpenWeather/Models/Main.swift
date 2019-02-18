@@ -27,4 +27,11 @@ class Main: Unboxable {
         self.tempFahrenheit = ""
         self.selectedTemp = ""
     }
+    
+    init(tempCelsius: String) {
+        self.tempCelsius = "\(tempCelsius)°C"
+        let fahrenheit = WeatherHelper.convertToFahrenheit(celsius: Double(tempCelsius)!)
+        self.tempFahrenheit = "\(fahrenheit)°F"
+        self.selectedTemp = UserPreference.getShowFahrenheitTemp() ? self.tempFahrenheit : self.tempCelsius
+    }
 }

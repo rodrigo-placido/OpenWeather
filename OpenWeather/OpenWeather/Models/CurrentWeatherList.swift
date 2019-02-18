@@ -19,4 +19,8 @@ class CurrentWeatherList: Unboxable {
     init() {
         self.currentWeatherList = [CurrentWeather]()
     }
+    
+    init(currentWeatherList: [CurrentWeather]) {
+        self.currentWeatherList = currentWeatherList
+    }
 }

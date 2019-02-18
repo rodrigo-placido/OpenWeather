@@ -32,24 +32,9 @@ class GetCurrentWeatherServiceImp: GetCurrentWeatherService {
                     }
                     break
                 case .failure(_):
-                    completion(nil, self.parseError(fromResponse: response))
+                    completion(nil, ParseError.parseError(fromResponse: response))
                     break
                 }
-        }
-    }
-    
-    private func parseError<T>(fromResponse response: DataResponse<T>) -> ApiError {
-        guard let statusCode = response.response?.statusCode else { return ApiError.unknown }
-        
-        switch statusCode {
-        case 401:
-            return ApiError.unauthorized
-        case 500:
-            return ApiError.serverError
-        case 503:
-            return ApiError.serviceUnavailable
-        default:
-            return ApiError.unknown
         }
     }
 }

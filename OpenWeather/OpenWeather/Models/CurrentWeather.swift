@@ -28,4 +28,11 @@ class CurrentWeather: Unboxable {
         self.main = try unboxer.unbox(key: "main")
         self.weather = try unboxer.unbox(key: "weather")
     }
+    
+    init(name: String, coord: Coord, main: Main, weather: [Weather]) {
+        self.name = name
+        self.coord = coord
+        self.main = main
+        self.weather = weather
+    }
 }

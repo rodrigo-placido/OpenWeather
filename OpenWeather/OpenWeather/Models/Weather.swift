@@ -31,4 +31,12 @@ class Weather: Unboxable {
         self.icon = try unboxer.unbox(key: "icon")
         self.iconUrl = "http://openweathermap.org/img/w/\(self.icon).png"
     }
+    
+    init(id: Int, main: String, description: String, icon: String) {
+        self.id = id
+        self.main = main
+        self.description = description
+        self.icon = icon
+        self.iconUrl = "http://openweathermap.org/img/w/\(self.icon).png"
+    }
 }
