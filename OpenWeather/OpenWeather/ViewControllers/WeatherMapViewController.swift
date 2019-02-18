@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 
 class WeatherMapViewController: UIViewController {
     let weatherViewModel: WeatherViewModel
@@ -40,14 +41,23 @@ class WeatherMapViewController: UIViewController {
         self.mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0.0).isActive = true
         self.mapView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0.0).isActive = true
         self.mapView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0.0).isActive = true
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.load()
+    }
+    
+    private func load() {
         LocationManager.sharedInstance.getLocation(startCallback: {
             print("DidStartLocation")
         }) { (location, error) in
-            self.loadWeatherList(location!)
+            if (error == nil) {
+                self.loadWeatherList(location!)
+            } else {
+                let alert = UIAlertController(title: "Atenção", message: "Por favor ative o uso da localização para usar o app", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler:nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -56,18 +66,39 @@ class WeatherMapViewController: UIViewController {
             switch(callback){
             case .success(let list):
                 self.listWeathers = list
-                self.centerMapOnLocation(location)
-                self.mapView.removeAnnotations(self.mapView.annotations)
-                
-                for location in self.listWeathers.currentWeatherList {
-                    let annotation = MKPointAnnotation()
-                    annotation.title = location.name
-                    annotation.subtitle = "\(location.main.selectedTemp!)"
-                    annotation.coordinate = CLLocationCoordinate2D(latitude: location.coord.lat, longitude: location.coord.lon)
-                    self.mapView.addAnnotation(annotation)
-                }
+                self.buildMApView(location)
+                SVProgressHUD.dismiss()
+                break
+            case .loading:
+                SVProgressHUD.show(withStatus: "Carregando...")
+                break
+            case .error(let error):
+                self.showError(error)
+                SVProgressHUD.dismiss()
+                break
             }
         }
+    }
+    
+    private func buildMApView(_ location: CLLocation) {
+        self.centerMapOnLocation(location)
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        
+        for location in self.listWeathers.currentWeatherList {
+            let annotation = MKPointAnnotation()
+            annotation.title = location.name
+            annotation.subtitle = "\(location.main.selectedTemp!)"
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.coord.lat, longitude: location.coord.lon)
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
+    private func showError(_ apiError: ApiError) {
+        let alert = UIAlertController(title: "Erro", message: apiError.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Recarregar", style: UIAlertAction.Style.default, handler: { action in
+            self.load()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -75,7 +106,7 @@ extension WeatherMapViewController: MKMapViewDelegate {
     @objc func didDragMap(_ sender: UIGestureRecognizer) {
         if sender.state == .ended {
             let location = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-                        self.loadWeatherList(location)// do something here
+                        self.loadWeatherList(location)
         }
     }
     

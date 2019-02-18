@@ -14,3 +14,18 @@ enum ApiError: Error {
     case serviceUnavailable
     case unknown
 }
+
+extension ApiError: LocalizedError {
+    var localizedDescription: String {
+        switch self {
+        case .unauthorized:
+            return "Erro de autorização"
+        case .serverError:
+            return "Erro interno do servidor"
+        case .serviceUnavailable:
+            return "Serviço temporariamente indisponível"
+        case .unknown:
+            return "Erro desconhecido"
+        }
+    }
+}

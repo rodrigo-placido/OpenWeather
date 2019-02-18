@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import CoreLocation
+import SVProgressHUD
 
 class WeatherTableViewController: UITableViewController {
     let weatherViewModel: WeatherViewModel
@@ -29,7 +30,6 @@ class WeatherTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.register(WeatherListTableViewCell.self, forCellReuseIdentifier: "WeatherListTableViewCell")
         self.tableView.tableFooterView = UIView()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,13 +40,27 @@ class WeatherTableViewController: UITableViewController {
         LocationManager.sharedInstance.getLocation(startCallback: {
             print("DidStartLocation")
         }) { (location, error) in
-            self.weatherViewModel.getCurrentWeatherBy(lat: location!.coordinate.latitude, lon:  location!.coordinate.longitude) { (callback) in
-                switch(callback){
-                case .success(let list):
-                    self.listWeathers = list
-                    self.tableView.reloadData()
-                    break
+            if (error == nil) {
+                self.weatherViewModel.getCurrentWeatherBy(lat: location!.coordinate.latitude, lon:  location!.coordinate.longitude) { (callback) in
+                    switch(callback){
+                    case .success(let list):
+                        self.listWeathers = list
+                        self.tableView.reloadData()
+                        SVProgressHUD.dismiss()
+                        break
+                    case .loading():
+                        SVProgressHUD.show(withStatus:"Carregando...")
+                        break
+                    case .error(let error):
+                        self.showError(error)
+                        SVProgressHUD.dismiss()
+                        break
+                    }
                 }
+            } else {
+                let alert = UIAlertController(title: "Atenção", message: "Por favor ative o uso da localização para usar o app", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler:nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -71,6 +85,14 @@ class WeatherTableViewController: UITableViewController {
         cell.iconImageView.kf.setImage(with: URL(string: currentWeather.weather[0].iconUrl))
         cell.tempLabel.text = "\(currentWeather.main.selectedTemp!)"
         return cell
+    }
+    
+    private func showError(_ apiError: ApiError) {
+        let alert = UIAlertController(title: "Erro", message: apiError.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Recarregar", style: UIAlertAction.Style.default, handler: { action in
+            self.loadWeatherList()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

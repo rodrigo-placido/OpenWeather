@@ -11,7 +11,9 @@ import CoreLocation
 import MapKit
 
 enum WeatherViewModelCallback {
+    case loading()
     case success(_ currentWeatherList: CurrentWeatherList)
+    case error(_ apiError: ApiError)
 }
 
 class WeatherViewModel {
@@ -31,16 +33,21 @@ class WeatherViewModel {
         let latMax = region.center.latitude + 0.5 * region.span.latitudeDelta;
         let lonMin = region.center.longitude - 0.5 * region.span.longitudeDelta;
         let lonMax = region.center.longitude + 0.5 * region.span.longitudeDelta;
-
+        
+        completion(.loading())
         getCurrentWeatherService.getCurrentWeatherBy(latMin: latMin, latMax: latMax, lonMin: lonMin, lonMax: lonMax) { (currentWeather, error) in
-            currentWeather?.currentWeatherList.forEach(){
-                $0.coord.distance = self.distanceFromLocation(location1: CLLocation(latitude: lat, longitude: lon), location2: CLLocation(latitude: $0.coord.lat, longitude: $0.coord.lon))
+            if (error == nil) {
+                currentWeather?.currentWeatherList.forEach(){
+                    $0.coord.distance = self.distanceFromLocation(location1: CLLocation(latitude: lat, longitude: lon), location2: CLLocation(latitude: $0.coord.lat, longitude: $0.coord.lon))
+                }
+                currentWeather?.currentWeatherList = ((currentWeather?.currentWeatherList.filter({$0.coord.distance!
+                    < 50000.0}).sorted(by: {(a: CurrentWeather, b: CurrentWeather) -> Bool in
+                        return a.coord.distance! < b.coord.distance!
+                    }))!)
+                completion(.success(currentWeather!))
+            } else {
+                completion(.error(error!))
             }
-            currentWeather?.currentWeatherList = ((currentWeather?.currentWeatherList.filter({$0.coord.distance!
-                < 50000.0}).sorted(by: {(a: CurrentWeather, b: CurrentWeather) -> Bool in
-                    return a.coord.distance! < b.coord.distance!
-                }))!)
-            completion(.success(currentWeather!))
         }
     }
     
