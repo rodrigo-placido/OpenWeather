@@ -20,7 +20,6 @@
 		131E882A543B8F0D674F4C76468BBC09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE09579986614F118FFC73FD1BFD5 /* Foundation.framework */; };
 		154453261BFA0D20EDA6F6AC2FF2C3B2 /* UnboxableEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E853BD55D078BC6474281FA7E1559 /* UnboxableEnum.swift */; };
 		1645F371ACA1CE61D5F55D58096A8A8D /* Unboxer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EEB5E8D5E60F754B084C2BD1EF3DB5 /* Unboxer.swift */; };
-		176FFBB689FAF852FCBC405A56EB2402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE09579986614F118FFC73FD1BFD5 /* Foundation.framework */; };
 		1A5325A4C258C01CA851D63632C9C2A8 /* JSONSerialization+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D27185CF326DB1223F0ED1A2631834 /* JSONSerialization+Unbox.swift */; };
 		1F8144D6233A353975F7BBF08B16A4DB /* Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E13579B7A3585182EC35DF2C86FE85 /* Unbox.swift */; };
 		1FC3FD39157C2FFFF3869A1300730086 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68D59A6508211DBE8A72146FF3B9F7 /* SessionDelegate.swift */; };
@@ -38,6 +37,7 @@
 		3E7468FD0FBE74B531819D22C7032FDE /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 311F7A4D5240370B94FD492E4F6B2EED /* Kingfisher-dummy.m */; };
 		3F51726556AA0A82C5E68E11097EBFE7 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01075C3A72B56FE215357C5102F8A1F /* ImagePrefetcher.swift */; };
 		3F6E5C6A694E403ADBB0094AA99B3522 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8162A9D36139DE17C766E384C54987F /* AnimatedImageView.swift */; };
+		409FC7577BFC7148697BF9E66F015DC9 /* Pods-OpenWeatherTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F9F94CCA071FC00F27C595E49BD20 /* Pods-OpenWeatherTests-dummy.m */; };
 		42212CABA9241CE8747517456BA27B2A /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9485C3FA81B0EC5FBB236F7D509BF38 /* ImageTransition.swift */; };
 		42FD53993CA73450629FD0324F417488 /* Float+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541910A02CFA9B7B00FEC25016AEC38 /* Float+Unbox.swift */; };
 		46F8454A2EC5F10BEDA3CD458B91C710 /* String+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E67153932F4C92C2A034521FC9231D4 /* String+Unbox.swift */; };
@@ -60,6 +60,7 @@
 		5EE5FED83B90A606A763CF1114D1D6FB /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D9AFC69ED6D10D0C8FC2BB9FED1F2 /* ResponseSerialization.swift */; };
 		620E38D54FDDB0B75EFC6DDE88B66E2E /* UnboxContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DE076D93EB3BE8D1BDC8BB8965461 /* UnboxContainer.swift */; };
 		634C56711076FB9E93A89DDF78D48BE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE09579986614F118FFC73FD1BFD5 /* Foundation.framework */; };
+		65653EF8491440B4A8ED18A3E69336AE /* Pods-OpenWeatherTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED32E66D118D524CC1DF757BADADDA45 /* Pods-OpenWeatherTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		676E47E74FFBFF4C5D79516F05F70DD5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82807D9060570D6B6C8ABC3ED37916 /* Filter.swift */; };
 		6BEA14EC335E07C7063CD1383C0C443C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E7274C0490F83562545E00894BE7E /* ServerTrustPolicy.swift */; };
 		6DBE7C8EBFF38028376E48DE68BCCA5D /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CCADF7381467F7197443F048A394DD /* ExtensionHelpers.swift */; };
@@ -109,6 +110,7 @@
 		BC3014E4DB35455F17EAC16C9DB8E633 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4904FCDE50EEAAFE6A44944D2DFD4F4F /* SVProgressHUD.bundle */; };
 		BDEC9A4486E693D19FFF6215EBF9A7C7 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5156EC10A2E4F6B278E75E981C9B9 /* ImageModifier.swift */; };
 		BE4BA1EDE444A770F834605F4B65348E /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1942E2D31F16B244FC215C32FDF5A0 /* AFError.swift */; };
+		BE5A0B071A41E53E42879FF9DE9AF2D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE09579986614F118FFC73FD1BFD5 /* Foundation.framework */; };
 		BFAA2D722639F8E60BCD5DFD4C959501 /* UInt+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089337C9AE2E2EF3D37E7464D3048FEA /* UInt+Unbox.swift */; };
 		C0BEBF62D3342051B9B629C179208887 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 00994D6C2EC700FB9DCA2A196CE722B0 /* SVProgressHUD.m */; };
 		C18AEF6BFF217755B0731AAC5CEEB6F8 /* Pods-OpenWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 832FD16C0239A4136A33D10981CB71C2 /* Pods-OpenWeather-dummy.m */; };
@@ -127,7 +129,6 @@
 		E4D92EC555B526E5A10229220A9DD2E6 /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF835C6B4630DF19D68DCE066C859316 /* ImageFormat.swift */; };
 		E4EC2B1BF9087EC1E77851A0C0B270B9 /* URL+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB47B2402FE9AD2E6EDF44A1153CF65 /* URL+Unbox.swift */; };
 		E6B19CAA68CD702303A6A853CA5D9908 /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A9F751859DDEB467BEF363A04389C /* ImageDataProvider.swift */; };
-		E6B65DB81FF70D6E6F8CF6D671ACFC4B /* Pods-OpenWeatherTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F9F94CCA071FC00F27C595E49BD20 /* Pods-OpenWeatherTests-dummy.m */; };
 		E83A7BF6CF37ECA8A741E14F24FFB106 /* UnboxableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE91ADF3159E6DABFFA4BB61EAD3BE5 /* UnboxableKey.swift */; };
 		EAF373D4415B0D816AD053EF4B00564B /* Unbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CEA645D680D947BA561D0B3A8FD2249 /* Unbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB115DF0B933DC17717F69ADA3A8917B /* UnboxArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F05FD750DA418D775CCD0F5CB3141E /* UnboxArrayContainer.swift */; };
@@ -135,7 +136,6 @@
 		EF1461221681BCA12A4147900A704727 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 926F68F08C7BE90FE78C8A955BF7E8E8 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F14C49C2C104FEB8B8E0AB1257FB25FE /* UInt64+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10534B231DC6CE243B897DE1A7FDF79E /* UInt64+Unbox.swift */; };
 		F2FDDD2434EAC72260475E568ACDB8AF /* UnboxableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542251663A6FAB97FE90799F2A11685D /* UnboxableCollection.swift */; };
-		F3AB2D8D231DBA49B5404CBF2AE2F827 /* Pods-OpenWeatherTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED32E66D118D524CC1DF757BADADDA45 /* Pods-OpenWeatherTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F76CCBE789BDB16C21ABD681AEA78644 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AF00FE9D682C1EED4290C1FD2AC2C9 /* RedirectHandler.swift */; };
 		F7DA22EC7EE6F82EBB5113B933EDB3D3 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 917A41C040F622123D98BDFFB709259F /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F984333D41C4DBFB8B11CD41F963E785 /* Unbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4D8FC581C8E7D01CF1BD4BF15A532 /* Unbox-dummy.m */; };
@@ -155,12 +155,40 @@
 			remoteGlobalIDString = BE19033E6AA3AD397D7E7358B4FE34EB;
 			remoteInfo = SVProgressHUD;
 		};
+		0763A97EAB63687123B5FA46267B538B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 023F2AABBC4B01A9EACC0834D140E6A5;
+			remoteInfo = "Pods-OpenWeather";
+		};
+		19A7E39D4A5BF671C1E4297BBE630A79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E76458C58C9140B6A16D60547E68E80C;
+			remoteInfo = Alamofire;
+		};
+		1C9A096C4DF12BC1803E1073C81CED70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE19033E6AA3AD397D7E7358B4FE34EB;
+			remoteInfo = SVProgressHUD;
+		};
 		503082E2BAC8218D753D40AFC96EEA91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 023F2AABBC4B01A9EACC0834D140E6A5;
 			remoteInfo = "Pods-OpenWeather";
+		};
+		869EC175F3DE2FA19700DF640CFC09E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD474833B06B29B7D1BA0D67C4242B09;
+			remoteInfo = Unbox;
 		};
 		89C59A30EFF80149DD57259090039C3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -169,19 +197,19 @@
 			remoteGlobalIDString = AD474833B06B29B7D1BA0D67C4242B09;
 			remoteInfo = Unbox;
 		};
-		B63B30389F272A1288DE023BD23F0EFF /* PBXContainerItemProxy */ = {
+		ABDCD16AD7C5F9B88BC9FA0665E264D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 46D23D574A977D2A012EC4B6954BFCFF;
 			remoteInfo = Kingfisher;
 		};
-		CAB39798FD8362483FE93D6826C423DC /* PBXContainerItemProxy */ = {
+		B63B30389F272A1288DE023BD23F0EFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 023F2AABBC4B01A9EACC0834D140E6A5;
-			remoteInfo = "Pods-OpenWeather";
+			remoteGlobalIDString = 46D23D574A977D2A012EC4B6954BFCFF;
+			remoteInfo = Kingfisher;
 		};
 		E630D0D963A87163B2C7AE5F7EB09963 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -402,20 +430,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71C7B370DCF06A03A07C6F115F3C68A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				176FFBB689FAF852FCBC405A56EB2402 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		72EBD637BB016CB4C39E3E81F8E92D6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2AB966D70649775FEC2645CA39877B86 /* CoreGraphics.framework in Frameworks */,
 				634C56711076FB9E93A89DDF78D48BE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB462D88AF765D89BBDED86FF3AABE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5A0B071A41E53E42879FF9DE9AF2D1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,11 +820,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DBF91CC31927E72D06C9BC90097B4F5 /* Headers */ = {
+		1B668C860D16025E54AABFE7FAD82A26 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3AB2D8D231DBA49B5404CBF2AE2F827 /* Pods-OpenWeatherTests-umbrella.h in Headers */,
+				65653EF8491440B4A8ED18A3E69336AE /* Pods-OpenWeatherTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,25 +889,6 @@
 			productReference = 76BA1488F6DFE469FAED8AEB04E0BF2B /* Pods_OpenWeather.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		11AC4142648BE8C144B5ECBF44EEE3AC /* Pods-OpenWeatherTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01069F81BAEB4A488E646A59894FF857 /* Build configuration list for PBXNativeTarget "Pods-OpenWeatherTests" */;
-			buildPhases = (
-				1DBF91CC31927E72D06C9BC90097B4F5 /* Headers */,
-				D63D50A7645A2CA17DC658671A6A89E1 /* Sources */,
-				71C7B370DCF06A03A07C6F115F3C68A5 /* Frameworks */,
-				AABD0AD06D82E981CD89ACC8B254C4A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F166596BA0F1EC8EAD6CD8ACCCA79FE7 /* PBXTargetDependency */,
-			);
-			name = "Pods-OpenWeatherTests";
-			productName = "Pods-OpenWeatherTests";
-			productReference = 37C51B335BEBEBAB195CD8734AAB13E9 /* Pods_OpenWeatherTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		46D23D574A977D2A012EC4B6954BFCFF /* Kingfisher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5031C08B6A2A11113F2EFA80EFB57804 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
@@ -896,6 +905,29 @@
 			name = Kingfisher;
 			productName = Kingfisher;
 			productReference = 4BB8E9A9391BD79118C19C0AA02E39B6 /* Kingfisher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99B1B2DB1F38DFA1DDA6EBB79312191F /* Pods-OpenWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84775B4B9F4D69888589C678DEB3592A /* Build configuration list for PBXNativeTarget "Pods-OpenWeatherTests" */;
+			buildPhases = (
+				1B668C860D16025E54AABFE7FAD82A26 /* Headers */,
+				E656E346F2B6A3304D9544C5F2890895 /* Sources */,
+				8BB462D88AF765D89BBDED86FF3AABE8 /* Frameworks */,
+				52B1E3FA1A016FF82B36535EFA9FB35C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				646AEABE1AD81515394E3D1F9D5BB29B /* PBXTargetDependency */,
+				807629BEF253DEDFE97B1428C35B4B46 /* PBXTargetDependency */,
+				476F264E4EB52F1C8E55C8625A2AE052 /* PBXTargetDependency */,
+				4946B7C34E729ED1657ABA948A342175 /* PBXTargetDependency */,
+				A9C3E9B5C465F0AD365EA01C66D365D0 /* PBXTargetDependency */,
+			);
+			name = "Pods-OpenWeatherTests";
+			productName = "Pods-OpenWeatherTests";
+			productReference = 37C51B335BEBEBAB195CD8734AAB13E9 /* Pods_OpenWeatherTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AB4B261583E4961A935431D00D73A9D7 /* Pods-OpenWeatherUITests */ = {
@@ -995,7 +1027,7 @@
 				E76458C58C9140B6A16D60547E68E80C /* Alamofire */,
 				46D23D574A977D2A012EC4B6954BFCFF /* Kingfisher */,
 				023F2AABBC4B01A9EACC0834D140E6A5 /* Pods-OpenWeather */,
-				11AC4142648BE8C144B5ECBF44EEE3AC /* Pods-OpenWeatherTests */,
+				99B1B2DB1F38DFA1DDA6EBB79312191F /* Pods-OpenWeatherTests */,
 				AB4B261583E4961A935431D00D73A9D7 /* Pods-OpenWeatherUITests */,
 				BE19033E6AA3AD397D7E7358B4FE34EB /* SVProgressHUD */,
 				AD474833B06B29B7D1BA0D67C4242B09 /* Unbox */,
@@ -1018,14 +1050,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AF5B9253ECB0065A718FDECD7AC2BBE /* Resources */ = {
+		52B1E3FA1A016FF82B36535EFA9FB35C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AABD0AD06D82E981CD89ACC8B254C4A2 /* Resources */ = {
+		7AF5B9253ECB0065A718FDECD7AC2BBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1204,11 +1236,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D63D50A7645A2CA17DC658671A6A89E1 /* Sources */ = {
+		E656E346F2B6A3304D9544C5F2890895 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B65DB81FF70D6E6F8CF6D671ACFC4B /* Pods-OpenWeatherTests-dummy.m in Sources */,
+				409FC7577BFC7148697BF9E66F015DC9 /* Pods-OpenWeatherTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1229,6 +1261,30 @@
 			target = AD474833B06B29B7D1BA0D67C4242B09 /* Unbox */;
 			targetProxy = 89C59A30EFF80149DD57259090039C3E /* PBXContainerItemProxy */;
 		};
+		476F264E4EB52F1C8E55C8625A2AE052 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OpenWeather";
+			target = 023F2AABBC4B01A9EACC0834D140E6A5 /* Pods-OpenWeather */;
+			targetProxy = 0763A97EAB63687123B5FA46267B538B /* PBXContainerItemProxy */;
+		};
+		4946B7C34E729ED1657ABA948A342175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = BE19033E6AA3AD397D7E7358B4FE34EB /* SVProgressHUD */;
+			targetProxy = 1C9A096C4DF12BC1803E1073C81CED70 /* PBXContainerItemProxy */;
+		};
+		646AEABE1AD81515394E3D1F9D5BB29B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = E76458C58C9140B6A16D60547E68E80C /* Alamofire */;
+			targetProxy = 19A7E39D4A5BF671C1E4297BBE630A79 /* PBXContainerItemProxy */;
+		};
+		807629BEF253DEDFE97B1428C35B4B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = 46D23D574A977D2A012EC4B6954BFCFF /* Kingfisher */;
+			targetProxy = ABDCD16AD7C5F9B88BC9FA0665E264D6 /* PBXContainerItemProxy */;
+		};
 		8531BF4ABA43BAA714F7EF7F0F3554D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
@@ -1241,6 +1297,12 @@
 			target = 023F2AABBC4B01A9EACC0834D140E6A5 /* Pods-OpenWeather */;
 			targetProxy = 503082E2BAC8218D753D40AFC96EEA91 /* PBXContainerItemProxy */;
 		};
+		A9C3E9B5C465F0AD365EA01C66D365D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Unbox;
+			target = AD474833B06B29B7D1BA0D67C4242B09 /* Unbox */;
+			targetProxy = 869EC175F3DE2FA19700DF640CFC09E5 /* PBXContainerItemProxy */;
+		};
 		C166FF0300970E5D0CD7E9356C5ED66E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SVProgressHUD;
@@ -1252,12 +1314,6 @@
 			name = Kingfisher;
 			target = 46D23D574A977D2A012EC4B6954BFCFF /* Kingfisher */;
 			targetProxy = B63B30389F272A1288DE023BD23F0EFF /* PBXContainerItemProxy */;
-		};
-		F166596BA0F1EC8EAD6CD8ACCCA79FE7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-OpenWeather";
-			target = 023F2AABBC4B01A9EACC0834D140E6A5 /* Pods-OpenWeather */;
-			targetProxy = CAB39798FD8362483FE93D6826C423DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1435,44 +1491,6 @@
 			};
 			name = Release;
 		};
-		6597BC1C764AFC73D80BD252E48D5016 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FF5BB57C68C2E318B29278035ED9E92 /* Pods-OpenWeatherTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OpenWeatherTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OpenWeatherTests/Pods-OpenWeatherTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		76F0B818060AB3C062CF86893CE2C05B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FE4744CE3A74C2384E359A718A23FCE /* Kingfisher.xcconfig */;
@@ -1647,6 +1665,45 @@
 			};
 			name = Debug;
 		};
+		A0BC98975824888C99D397DD7AF17E5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEF97891DBC5F65CA009C007E66A062B /* Pods-OpenWeatherTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OpenWeatherTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OpenWeatherTests/Pods-OpenWeatherTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B74E1196DA105B7A7C00B9C0FC885ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F34F0502EDB5DD4CAE2A659F450CBBFF /* SVProgressHUD.xcconfig */;
@@ -1676,6 +1733,44 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1BA93DE3AA97EF0F22FD36C9ED46223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FF5BB57C68C2E318B29278035ED9E92 /* Pods-OpenWeatherTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OpenWeatherTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OpenWeatherTests/Pods-OpenWeatherTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1795,45 +1890,6 @@
 			};
 			name = Debug;
 		};
-		D8F6C1B5EE7A8F0B9C1D41DC944273E3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEF97891DBC5F65CA009C007E66A062B /* Pods-OpenWeatherTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OpenWeatherTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OpenWeatherTests/Pods-OpenWeatherTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		EC9A261B056C00F0886F9CF9983FE2E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D9E4BECE8B6E78279C4C8970EAD7CED /* Pods-OpenWeatherUITests.debug.xcconfig */;
@@ -1910,15 +1966,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01069F81BAEB4A488E646A59894FF857 /* Build configuration list for PBXNativeTarget "Pods-OpenWeatherTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6597BC1C764AFC73D80BD252E48D5016 /* Debug */,
-				D8F6C1B5EE7A8F0B9C1D41DC944273E3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1491FD3C56C8C17016C653B00EDBF431 /* Build configuration list for PBXNativeTarget "Pods-OpenWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1969,6 +2016,15 @@
 			buildConfigurations = (
 				850D12F0F20BC1715C911FA6AC866ACF /* Debug */,
 				76F0B818060AB3C062CF86893CE2C05B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84775B4B9F4D69888589C678DEB3592A /* Build configuration list for PBXNativeTarget "Pods-OpenWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1BA93DE3AA97EF0F22FD36C9ED46223 /* Debug */,
+				A0BC98975824888C99D397DD7AF17E5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
